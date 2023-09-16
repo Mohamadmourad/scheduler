@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/55a4ab9ea3.js" crossorigin="anonymous"></script>
+    <title>scheduler</title>
+</head>
+<body>
+    <header>
+        scheduler <i class="fa-solid fa-calendar-days"></i>
+    </header>
+    <div class="mainSection">
+        <button class="delete" id="delete"><i class="fa-solid fa-trash"></i></button>
+      <main>
+         <div class="days">
+            <p>days<br>time</p>
+            <p>8:00 <i class="fa-solid fa-arrow-right"></i> 9:15</p>
+            <p>9:30 <i class="fa-solid fa-arrow-right"></i> 10:45</p>
+            <p>11:00 <i class="fa-solid fa-arrow-right"></i> 12:15</p>
+            <p>12:30 <i class="fa-solid fa-arrow-right"></i> 1:45</p>
+            <p>2:00 <i class="fa-solid fa-arrow-right"></i> 3:15</p>
+            <p>3:30 <i class="fa-solid fa-arrow-right"></i> 4:45</p>
+         </div>
+         <div class="monday">
+            <div>Monday</div>
+            <div class="MW8_00"></div>
+            <div class="MW9_30"></div>
+            <div class="MW11_00"></div>
+            <div class="MW12_30"></div>
+            <div class="MW2_00"></div>
+            <div class="MW3_30"></div>
+         </div>
+         <div class="tuesday">
+            <div>Tuesday</div>
+            <div class="TTH8_00"></div>
+            <div class="TTH9_30"></div>
+            <div class="TTH11_00"></div>
+            <div class="TTH12_30"></div>
+            <div class="TTH2_00"></div>
+            <div class="TTH3_30"></div> 
+         </div>
+         <div class="wednesday">
+            <div>Wednesday</div>
+            <div class="MW8_00"></div>
+            <div class="MW9_30"></div>
+            <div class="MW11_00"></div>
+            <div class="MW12_30"></div>
+            <div class="MW2_00"></div>
+            <div class="MW3_30"></div>
+         </div>
+         <div class="thursday">
+            <div>Thursday</div>
+            <div class="TTH8_00"></div>
+            <div class="TTH9_30"></div>
+            <div class="TTH11_00"></div>
+            <div class="TTH12_30"></div>
+            <div class="TTH2_00"></div>
+            <div class="TTH3_30"></div>
+         </div>
+      </main>
+      <div class="submitPart">
+        <p>enter class</p>
+        <form>
+            <input type="text" placeholder="Enter course name" id="name">
+          <div class="lists">
+           
+              <select id="day">
+                <option value="MW">MW</option>
+                <option value="TTH">TTH</option>
+              </select>
+
+               <select id="time">
+                <option value="8_00">8:00 ==> 9:15</option>
+                <option value="9_30">9:30 ==> 10:45</option>
+                <option value="11_00">11:00 ==> 12:15</option>
+                <option value="12_30">12:30 ==> 1:45</option>
+                <option value="2_00">2:00 ==> 3:15</option>
+                <option value="3_30">3:30 ==> 4:45</option>
+              </select>
+
+            </div>
+            <input type="submit">   
+        </form>
+      </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
