@@ -21,8 +21,17 @@ function changes(selectedPeriod,courseName){
       });    
 }
 
-document.getElementById("delete").onclick = () =>{//delete button
-   selected.forEach(select => {
+document.getElementById("delete").onclick = () =>{
+    document.getElementById('deleteMenu').style.display = "flex";
+}
+
+document.getElementById("no").onclick = () =>{
+    document.getElementById('deleteMenu').style.display = "none";
+}
+
+document.getElementById("yes").onclick = () =>{//delete button
+    document.getElementById('deleteMenu').style.display = "none";
+    selected.forEach(select => {
     let blocks = document.querySelectorAll(select);
     blocks.forEach(block => {
         block.style.backgroundColor = "white";
