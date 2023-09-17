@@ -184,3 +184,15 @@ form input{
     background-color: #8BE78B;
 }
 
+.credit{
+  text-align: center;
+    margin-top: 40%;
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+.credit p{
+    color: gold;
+    font-weight: bold;
+}
+
