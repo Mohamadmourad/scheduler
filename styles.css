@@ -25,7 +25,7 @@ header{
 
 .delete{
     position: relative;
-    left :45%;
+    left :42%;
     height: 45px;
     width: 45px;
     background-color: #EC6262;
@@ -33,6 +33,7 @@ header{
     border: none;
     border-radius: 10px;
     margin-bottom: 10px;
+    display: none;
 }
 
 .delete:hover{
@@ -45,9 +46,9 @@ background-color: #ef4a4a;
 
 main{
     border: solid black;
-    width: 94%;
+    width: 97%;
     height: 520px;
-    display: flex;
+    display: none;
 }
 
 main div{
@@ -91,18 +92,46 @@ form{
     display: flex;
     flex-direction: column;
     margin-top: 30px;
-    gap: 7px;
+    gap: 20px;
+    align-items: center;
 }
 
 form input{
     height: 30px;
 }
 
+#name{
+    width: 80%;
+    border: none;
+    padding-left: 10px;
+    border-radius: 6px;
+}
+
+#submit{
+    margin-top: 30px;
+    border: none;
+    background-color: #8BE78B;
+    color: white;
+    width: 90px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+#submit:active{
+    background-color: #61e661;
+}
+
+
 .lists{
     display: flex;
     justify-content: space-evenly;
+    gap: 10px;
 }
 
 .lists select{
     width: 150px;
+    border: none;
+    padding-left: 10px;
+    height: 30px;
+    border-radius: 6px;
 }

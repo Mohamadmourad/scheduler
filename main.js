@@ -1,8 +1,13 @@
+let selected = [];
+
 document.querySelector('form').onsubmit = () =>{   //when you submit
+    document.querySelector('main').style.display = "flex";
+    document.querySelector('#delete').style.display = "block";
     const courseName = document.getElementById('name').value;
     const day = document.getElementById('day').value;
     const time = document.getElementById('time').value;
     const selectedPeriod = "."+day+time;
+    selected.push(selectedPeriod); //for the delet button
     changes(selectedPeriod,courseName);
     return false;
 }
@@ -12,12 +17,21 @@ function changes(selectedPeriod,courseName){
     let periods = document.querySelectorAll(selectedPeriod);
     periods.forEach(period => {
         period.style.backgroundColor = color;//color from the colorSelector function
-        period.innerHTML= courseName;//the name that thw user entered
+        period.innerHTML= courseName;//the name that the user entered
       });    
 }
 
 document.getElementById("delete").onclick = () =>{//delete button
-    alert("hello world");
+   selected.forEach(select => {
+    let blocks = document.querySelectorAll(select);
+    blocks.forEach(block => {
+        block.style.backgroundColor = "white";
+        block.innerHTML= "";
+    })
+   });
+   selected = [];
+   document.querySelector('main').style.display = "none";
+   document.querySelector('#delete').style.display = "none";
 }
 
 function colorSelector(){// to make each time a randoom block color
