@@ -1,20 +1,6 @@
 let selected = [];
 
-document.addEventListener('DOMContentLoaded', () => {
-    // If there's no data in local storage, initialize it
-    if (!localStorage.getItem('selectedData')) {
-        localStorage.setItem('selectedData', '[]');
-    }
 
-    const selectedJSON = localStorage.getItem('selectedData');
-
-    selected = JSON.parse(selectedJSON);
-    if (selected.length > 0) {
-        document.querySelector('main').style.display = "flex";
-        document.querySelector('#delete').style.display = "block";
-    }
-    changes(selected, selected);
-});
 
 document.querySelector('form').onsubmit = () => {   //when you submit
     document.querySelector('main').style.display = "flex";
@@ -25,12 +11,6 @@ document.querySelector('form').onsubmit = () => {   //when you submit
     const selectedPeriod = "." + day + time;
     selected.push(selectedPeriod); //for the delet button
     changes(selectedPeriod, courseName);
-
-    // Convert the array to a JSON string
-    const selectedJSON = JSON.stringify(selected);
-
-    // Save it to local storage
-    localStorage.setItem('selectedData', selectedJSON);
     return false;
 }
 
